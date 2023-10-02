@@ -19,7 +19,10 @@
     <string name="Login">लॉगिन</string>
     <string name="Your_Name">आपका नाम</string>
     <string name="Register_Now">या विवरण दर्ज करें</string>
+    <string name="marketplace">मंडी </string>
     <string name="MicroFinanceTxt"></string>
+    <string name="agrotourisminfo">एग्रो-सहायक की मदद से किसान अपने गांवों में पर्यटन प्रदान कर सकते हैं</string>
+    <string name="marketplaceinfo">किसान किसी भी खरीदार से सीधा संपर्क कर सकते हैं</string>
     <string name="open">इसे खोलें</string>
     <string name="close">इसे बंद करें</string>
     <string name="Rental_plat">किराए के उपकरण</string>

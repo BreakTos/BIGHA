@@ -121,8 +121,8 @@ class Home : Fragment() {
             showCustomDialogBox1(FName,FExplain)
         }
         KM_MP.setOnClickListener {
-            val FName:String?="Market Place"
-            val FExplain:String?="Farmers can make a Direct Contact with any Buyer"
+            val FName:String?=getString(R.string.marketplace)
+            val FExplain:String?=getString(R.string.marketplaceinfo)
             showCustomDialogBox1(FName,FExplain)
         }
         KM_Rent.setOnClickListener {
@@ -131,8 +131,8 @@ class Home : Fragment() {
             showCustomDialogBox1(FName,FExplain)
         }
         KM_Agro.setOnClickListener {
-            val FName:String?="Agro Tourism"
-            val FExplain:String?="Farmers can provide tourism in their farm with the help of Agro-Sahayak"
+            val FName:String?=getString(R.string.agrotourism)
+            val FExplain:String?=""
             showCustomDialogBox1(FName,FExplain)
         }
 

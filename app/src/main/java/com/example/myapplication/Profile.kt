@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.content.Context
+import android.widget.PopupMenu
 import android.content.SharedPreferences
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -75,10 +76,43 @@ class Profile : Fragment() {
             requireActivity().startActivity(intent)
             requireActivity().finish()
         }
+        val langDropdownButton = v.findViewById<ImageView>(R.id.langBtn)
+
+        langDropdownButton.setOnClickListener { view ->
+            showLanguageMenu(view)
+        }
+
         return v
     }
 
+    private fun showLanguageMenu(view: View) {
+        val popupMenu = PopupMenu(requireContext(), view)
+        popupMenu.menuInflater.inflate(R.menu.languages_menu, popupMenu.menu)
 
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            // Handle item click
+            when (menuItem.itemId) {
+                R.id.language_en -> {
+                    // start a new activity named home2Activity , with an string intent "hi"
+                    val intent = Intent(requireContext(), home2Activity::class.java)
+                    intent.putExtra("key_name", "hi")
+                    requireActivity().startActivity(intent)
+                    requireActivity().finish()
+                }
+                R.id.language_hi -> {
+                    // Handle Spanish language selection
+                    val intent = Intent(requireContext(), home2Activity::class.java)
+                    intent.putExtra("key_name", "hi")
+                    requireActivity().startActivity(intent)
+                    requireActivity().finish()
+                }
+                // Add more cases for other languages as needed
+            }
+            true
+        }
+
+        popupMenu.show()
+    }
 
     companion object {
         /**

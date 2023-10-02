@@ -1,68 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg44"
+    android:orientation="vertical"
+    android:background="@color/lightgreen"
     tools:context=".signUpActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-    <LinearLayout
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/acc"
+       android:layout_marginTop="40dp"
+       android:scaleType="fitXY"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       />
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="28dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/Claret"
+        android:textSize="20dp"
+        android:text="Please make sure your account is "
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/Claret"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Bigha"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="60sp"
-            android:textColor="@color/my_primary"/>
+        android:textSize="20dp"
+        android:text=" verified with farmer id"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:background="@color/LightGrey"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:onClick="GoToVerification"
+        />
 
-
-
-        <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="350dp"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/lock"
-            android:layout_marginBottom="60dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="115dp"
-                android:text="Verify"
-                android:textColor="@color/white"
-                android:background="@color/green"
-                android:layout_marginTop="240dp"
-                android:textSize="40dp"
-                android:padding="10dp"
-                android:onClick="GoToVerification"
-                />
-
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="You are not verified"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="30sp"
-            android:textColor="#E81A0B"/>
-    </LinearLayout>
-
-
-
-
-</RelativeLayout>
+</LinearLayout>

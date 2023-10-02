@@ -6,14 +6,39 @@ import androidx.fragment.app.Fragment
 import android.content.Context
 import android.view.View
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AlertDialog
 import com.example.myapplication.databinding.ActivityHome2Binding
+import java.util.Locale
 
 class home2Activity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHome2Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val change=intent.getStringExtra("key_name")
+
+        if(change!=null){
+            val cur=getCurrentLocaleLanguage(this)
+            if (cur == "en") {
+                val hindiLocale = Locale("hi")
+                Locale.setDefault(hindiLocale)
+
+                val config = Configuration()
+                config.locale = hindiLocale
+                resources.updateConfiguration(config, resources.displayMetrics)
+            } else {
+                val englishLocale = Locale("en")
+                Locale.setDefault(englishLocale)
+
+                val config = Configuration()
+                config.locale = englishLocale
+                resources.updateConfiguration(config, resources.displayMetrics)
+            }
+
+        }
+
         binding = ActivityHome2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -33,6 +58,16 @@ class home2Activity : AppCompatActivity() {
             }
             true
         }
+    }
+    fun getCurrentLocaleLanguage(context: Context): String {
+        val resources = context.resources
+        val configuration: Configuration = resources.configuration
+        val locale: Locale = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            configuration.locales[0]
+        } else {
+            configuration.locale
+        }
+        return locale.language // Returns the current language code (e.g., "en" for English)
     }
 
     override fun onBackPressed() {

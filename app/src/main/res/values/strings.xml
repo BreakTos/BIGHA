@@ -22,6 +22,8 @@
     <string name="MicroFinanceTxt"></string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="marketplace">Market Place</string>
+    <string name="marketplaceinfo">Farmers can make a Direct Contact with any Buyer</string>
     <string name="Rental_plat">Rental Platform</string>
     <string name="Your_Rentals">YOUR RENTALS</string>
     <string name="microfinances">MicroFinances</string>
@@ -35,6 +37,7 @@
     <string name="detect_diseases">Detect Diseases</string>
     <string name="outbreaks_nearby">Outbreaks Nearby</string>
     <string name="agrotourism">AgroTourism</string>
+    <string name="agrotourisminfo">Farmers can provide tourism in their villages with the help of Agro-Sahayak</string>
     <string name="diversify_your_income">Diversify your income</string>
     <string name="agro_tourism_profile">Find Agro Tourism</string>
     <string name="filter">Filter</string>
